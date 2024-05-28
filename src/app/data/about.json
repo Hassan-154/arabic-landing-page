@@ -1,0 +1,37 @@
+{
+    "arabic": {
+        "title": "عن شركة كال القيمة",
+        "services": [
+            {
+                "description": "شركة كال القيمة للتقييم العقاري، شركة سعودية، مرخصة من الهيئة السعودية للمقيمين المعتمدين للتقييم بموجب الترخيص المهني رقم: 1210001458. يتألف فريق التقييم من خبراء في مجال التقييم العقاري وعلى دراية بما يحدث في السوق العقاري. يستند هذا الفريق ويؤدي عمله بدقة بالاعتماد على معايير التقييم الدولية."
+            },
+            {
+                "description": "(International Valuation Standards) IVS"
+            },
+            {
+                "description": "ونلتزم بدستور أخلاقيات المهنة (Code Of Ethics ) التابع لمعهد التثمين الأمريكي"
+            },
+            {
+                "description": "Appraisal Institue-AI"
+            }
+        ]
+    },
+    "english": {
+        "title": "About Kale Al Qeemah Company",
+        "services": [
+            {
+                "description": "Kale Al Qeemah Company for Real Estate Appraisal, a Saudi company, licensed by the Saudi Authority for Accredited Valuers under Professional License No: 1210001458. The appraisal team consists of experts in the field of real estate appraisal and is knowledgeable about market trends. This team relies on and performs its work accurately based on international valuation standards."
+            },
+            {
+                "description": "(International Valuation Standards) IVS"
+            },
+            {
+                "description": "We adhere to the Code of Ethics of the profession (Code Of Ethics) of the American Institute of Appraisal"
+            },
+            {
+                "description": "Appraisal Institute-AI"
+            }
+        ]
+        
+    }
+}

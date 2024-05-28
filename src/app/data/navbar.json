@@ -1,19 +1,38 @@
-[
+{
+  "arabic": [
     {
-      "title": "Home",
-      "link": "home"
+      "title": "عن الشركة",
+      "link": "about-us"
     },
     {
-      "title": "Services",
-      "link": "services"
+      "title": "أعمالنا",
+      "link": "our-services"
     },
     {
-        "title": "About",
-        "link": "about"
-      },
+      "title": "طلب تقييم",
+      "link": "request-evaluation"
+    },
     {
-      "title": "Contact",
-      "link": "contact"
+      "title": "تواصل معنا",
+      "link": "contact-us"
+    }
+  ],
+  "english": [
+    {
+      "title": "About Us",
+      "link": "about-us"
+    },
+    {
+      "title": "Our Services",
+      "link": "our-services"
+    },
+    {
+      "title": "Request Evaluation",
+      "link": "request-evaluation"
+    },
+    {
+      "title": "Contact Us",
+      "link": "contact-us"
     }
   ]
-  
+}
