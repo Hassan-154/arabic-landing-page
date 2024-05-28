@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect,useContext,useState } from 'react';
 import Image from "next/image";
 import backGround from '@/app/assets/images/Ellipse 5.png'
 import serviceData from '@/app/data/service.json'
