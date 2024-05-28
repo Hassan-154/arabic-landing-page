@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import React, { useContext, useEffect, useState } from 'react';
-import homeLogo from "@/app/assets/images/homelogo.png";
+import HomeLogo from "@/app/assets/images/homelogo.png";
 import topLeftCirlce from "@/app/assets/images/homeLeft.png";
 import topRightCirlce from "@/app/assets/images/homeRight.png";
 import UserContext from '@/app/context/UserContext';
@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="h-[97vh] max-w-[1200px] mx-auto flex justify-center items-center px-3">
         <div className="max-w-[850px]">
           <div className="max-w-[300px] mx-auto">
-            <Image src={homeLogo} alt="" />
+            <Image src={HomeLogo} alt="" />
           </div>
           <h5 className="text-[23px] sm:text-[30px] text-center font-medium mt-6">
             {data.heading}
