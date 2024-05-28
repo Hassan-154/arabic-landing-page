@@ -1,11 +1,11 @@
 'use client'
-import React, { useEffect,useContext,useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Image from "next/image";
 import backGround from '@/app/assets/images/Ellipse 5.png'
 import serviceData from '@/app/data/service.json'
 import UserContext from '@/app/context/UserContext';
 
-function service() {
+function Service() {
 
     const { language, setLanguage } = useContext(UserContext);
     const [data, setData] = useState([])
@@ -13,11 +13,11 @@ function service() {
     useEffect(() => {
         if (language === 'ar') {
             setData(serviceData.arabic)
-        }
-        else {
+        } else {
             setData(serviceData.english)
         }
     }, [language])
+
     console.log(data)
 
     return (
@@ -46,4 +46,4 @@ function service() {
     )
 }
 
-export default service
+export default Service;
