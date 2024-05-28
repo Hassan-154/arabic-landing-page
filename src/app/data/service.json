@@ -1,0 +1,65 @@
+{
+    "arabic": {
+      "title": "العملاء المستهدفون",
+      "subheadings": [
+        {
+          "heading": " العملاء المستهدفون في شركة التقييم العقاري تشكل مجموعة متنوعة من الأفراد والمسؤسسات التي تبحث عن خدمات دقيقة وموثوقة لتحديد القيمة السوقية للعقارات. هذه الخدمات ضرورية لعدة أسباب مختلفة بما في ذلك"
+        },
+        {
+          "heading": "البيع والشراء التمويل العقاري القيم لأغراض التأمين والتقييمات الضريبية. إليك نظرة على العملاء المستهدفين الرئيسيين"
+        }
+      ],
+      "services": [
+        {
+          "service": "الأفراد: يحتاج الأفراد إلى تقييمات عقارية عند شراء أو بيع منزل، للحصول على قرض عقاري، أو لأغراض تخطيط الضرائب والإرث"
+        },
+        {
+          "service": "المستثمرون: المستثمرون في العقارات، سواء كانوا أفرادًا أو شركات، يحتاجون إلى تقييمات دقيقة لتحديد القيمة الحقيقية للاستثمارات العقارية وتحليل العائد المحتمل على الاستثمار"
+        },
+        {
+          "service": "البنوك والمؤسسات المالية: تحتاج هذه المؤسسات إلى تقييمات عقارية لتحديد قيمة العقارات المعروضة كضمانات للقروض، بما في ذلك الرهون العقارية"
+        },
+        {
+          "service": "شركات التأمين: تستخدم شركات التأمين التقييمات العقارية لتحديد مبلغ التغطية اللازم لعقار معين ولتقييم المخاطر"
+        },
+        {
+          "service": "المطورون العقاريون: يعتمد المطورون على التقييمات العقارية لتقدير قيمة الأراضي والمشاريع الجديدة، مما يساعدهم في اتخاذ قرارات مستنيرة بشأن التطوير والاستثمار"
+        },
+        {
+          "service": "الهيئات الحكومية والمحلية: تستخدم لتقييم العقارات لأغراض ضريبية، تخطيط استخدام الأراضي، وفي بعض الحالات، لتحديد التعويضات في حالة الاستملاك"
+        }
+      ]
+    },
+    "english": {
+      "title": "Targeted Clients",
+      "subheadings": [
+        {
+          "heading": "Targeted clients in the real estate evaluation company constitute a diverse group of individuals and institutions seeking accurate and reliable services to determine the market value of properties. These services are necessary for several different reasons including"
+        },
+        {
+          "heading": "Buying and selling real estate financing for insurance and tax assessment purposes. Here's a look at the main targeted clients"
+        }
+      ],
+      "services": [
+        {
+          "service": "Individuals: Individuals need property evaluations when buying or selling a home, getting a mortgage, or for tax and inheritance planning purposes"
+        },
+        {
+          "service": "Investors: Real estate investors, whether individuals or companies, need accurate assessments to determine the true value of real estate investments and analyze potential returns on investment"
+        },
+        {
+          "service": "Banks and Financial Institutions: These institutions need property evaluations to determine the value of properties offered as collateral for loans, including mortgages"
+        },
+        {
+          "service": "Insurance Companies: Insurance companies use property evaluations to determine the necessary coverage amount for a specific property and to assess risks"
+        },
+        {
+          "service": "Real Estate Developers: Developers rely on property evaluations to estimate the value of land and new projects, helping them make informed decisions about development and investment"
+        },
+        {
+          "service": "Government and Local Authorities: Used for property assessments for tax purposes, land use planning, and in some cases, to determine compensation in cases of expropriation"
+        }
+      ]
+    }
+  }
+  
