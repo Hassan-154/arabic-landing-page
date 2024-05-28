@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import React, { useContext, useEffect, useState } from 'react';
-import HomeLogo from "@/app/assets/images/homelogo.png";
+import HomeLogo from "@/app/assets/images/homeLogo.png";
 import topLeftCirlce from "@/app/assets/images/homeLeft.png";
 import topRightCirlce from "@/app/assets/images/homeRight.png";
 import UserContext from '@/app/context/UserContext';
