@@ -11,6 +11,9 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+body{
+  background-color: #f9f7f4;
+}
 
 a.active{
   color: green !important
