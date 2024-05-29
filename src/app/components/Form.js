@@ -6,7 +6,7 @@ import formImage from '@/app/assets/images/Bitmap 1.png'
 
 function Form() {
     return (
-        <div className='bg-[#f9f7f4]'>
+        <div className='bg-[#f9f7f4] pt-[20vh] sm:pt-0'>
             <div className='relative overflow-x-hidden max-w-[1000px] mx-auto '>
                 <div className='h-[80vh] sm:h-[100vh] md:h-[120vh]'></div>
                 <Image className='absolute right-3 top-[200px]' src={rightCircle} alt='Right circle' width='270' height='270' />
