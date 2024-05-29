@@ -25,8 +25,8 @@ export default function Navbar() {
     }, [language])
 
     return (
-        <div className='fixed bg-white w-full h-[100px] navbar z-10 shadow-bottom'>
-            <div className="fixed w-full max-w-6xl mx-auto left-0 right-0 h-16 mt-[30px] flex justify-between items-center px-3 text-black">
+        <div className='fixed bg-white w-full h-[120px] navbar z-10 shadow-bottom'>
+            <div className="fixed w-full max-w-6xl mx-auto left-0 right-0 h-16 mt-[50px] flex justify-between items-center px-3 text-black">
                 <div className='text-darkGray'>
                     {
                         language === 'ar' ? (
