@@ -27,7 +27,7 @@ function Map() {
           <Image src={map} alt="Map of Saudi Arabia" width={260} height={180} className="object-contain" />
         </div>
       </div>
-      <div className='mt-3 max-w-[500px] mx-auto'>
+      <div className='mt-6 max-w-[430px] mx-auto'>
         <Button name={data.buttonName} image={buttonImage} />
       </div>
     </div>
