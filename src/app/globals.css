@@ -3,18 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family:  "Almarai", sans-serif;
+  font-family: "Almarai", sans-serif;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
 }
-body{
-  background-color: #f9f7f4;
-}
 
-a.active{
-  color: green !important
+body {
+  background-color: #f9f7f4;
 }
