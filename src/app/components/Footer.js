@@ -25,14 +25,14 @@ function Footer() {
   console.log(data)
 
   return (
-    <div className='py-10 bg-[#BCA37E80] text-black fpnt-medium text-[23px] sm:text-[30px]'>
+    <div className='py-10 bg-[#BCA37E80] text-black fpnt-medium text-[14px] sm:text-[30px]'>
       <div className='max-w-[900px] mx-auto px-3'>
       <div className=''>
       <div className='flex bg-white justify-center items-center p-4 rounded-[18px] max-w-[200px] mx-auto h-auto'>
       <Image src={logo} alt='' width='' height='' />
       </div>
       </div> 
-        <div className='flex flex-col justify-end gap-8 mt-10'>
+        <div className='flex flex-col justify-end gap-3 sm:gap-8 mt-10'>
           <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
             <div className={`flex gap-1.5 items-center ${language === 'en' ? 'flex-row-reverse' : ''}`}>
               <p>{data.title}</p>
@@ -61,7 +61,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className={`flex gap-1.5 items-center mt-[70px] ${language === 'en' ? 'flex-row-reverse' : ''}`}>
+        <div className={`flex gap-1.5 items-center mt-[40px] sm:mt-[70px] ${language === 'en' ? 'flex-row-reverse' : ''}`}>
           <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
             <div className='max-w-[36px] min-w-[36px] h-auto'><Image src={copyRight} alt='' width='' height='' /></div>
           </div>
