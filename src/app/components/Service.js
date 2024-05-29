@@ -19,12 +19,9 @@ function Service() {
         }
     }, [language])
 
-    console.log(data)
-    console.log(logoData)
-
     return (
         <main className="relative pb-10">
-            <Image className="ml-[250px] h-[265vh] sm:h-[195vh] w-auto" width='' height='' src={backGround} alt="Background image of كال القيمة company" />
+            <Image className="ml-[250px] h-[280vh] sm:h-[205vh] w-auto" width='' height='' src={backGround} alt="Background image of كال القيمة company" />
             <div className="absolute top-0 left-0 right-0 flex flex-col justify-center pt-8 px-3">
                 <article className={`flex flex-col gap-4 max-w-[900px] mx-auto text-[20px] sm:text-[24px] font-medium ${language === 'en' ? 'text-left' : 'text-right'}`}>
                     <h1 className="text-brown text-[28px] sm:text-[38px]">{data.title}</h1>

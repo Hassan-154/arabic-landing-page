@@ -1,0 +1,38 @@
+{
+    "arabic": {
+        "title": "تواصل معنا على الأرقام التالية",
+        "contactNumbers": [
+            {
+                "number": "+966 545 144 222"
+            },
+            {
+                "number": "+966 552 928 328"
+            },
+            {
+                "number": "+966 552 928 328"
+            }
+        ],
+        "email": "Info@kal-va.com",
+        "emailTitle": "البريد الإلكتروني",
+        "location": "موقعنا : المملكة العربية السعودية - مدينة الطائف - شارع الستين",
+        "copyRight": "جميع الحقوق محفوظة لشركة كال القيمة للتقييم العقاري"
+    },
+    "english": {
+        "title": "Contact Us at the Following Numbers",
+        "contactNumbers": [
+            {
+                "number": "+966 545 144 222"
+            },
+            {
+                "number": "+966 552 928 328"
+            },
+            {
+                "number": "+966 552 928 328"
+            }
+        ],
+        "email": "Info@kal-va.com",
+        "emailTitle": "Email",
+        "location": "Our Location: Saudi Arabia - Taif City - Sixty Street",
+        "copyRight": "All rights reserved to Kal Alqima Real Estate Appraisal Company"
+    }
+}

@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         brown: "#BCA37E",
         lightBrown: "#7A6E66",
-        darkGray: "#7f7f7f"
+        darkGray: "#7f7f7f",
+        darkBrown: "#c9b598",
       },
       boxShadow: {
         'bottom': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
