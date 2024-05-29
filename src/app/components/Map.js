@@ -22,8 +22,8 @@ function Map() {
   return (
     <div className='max-w-[900px] mx-auto py-16 px-3'>
       <div className='flex gap-[10px] sm:gap-[40px] items-center'>
-        <h3 className={`text-[20px] leading-[40px] md:text-[30px] font-semibold md:leading-[65px] ${language === 'en' ? 'text-left' : 'text-right'}`} itemProp="headline">{data.title}</h3>
-        <div className='min-w-[260px] h-auto'>
+        <h3 className={`text-[18px] leading-[35px] md:text-[30px] font-semibold md:leading-[65px] ${language === 'en' ? 'text-left' : 'text-right'}`} itemProp="headline">{data.title}</h3>
+        <div className=' min-w-[200px]  max-w-[200px]  sm:min-w-[260px] sm:max-w-[260px] h-auto'>
           <Image src={map} alt="Map of Saudi Arabia" width={260} height={180} className="object-contain" />
         </div>
       </div>
