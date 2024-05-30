@@ -28,7 +28,7 @@ function Map() {
         </div>
       </div>
       <div className='mt-6 max-w-[430px] mx-auto'>
-        <Button name={data.buttonName} image={buttonImage} />
+        <Button name={data.buttonName} image={buttonImage} onClick={()=> window.open("https://iwtsp.com/966552928328", "_blank")} />
       </div>
     </div>
   )

@@ -205,8 +205,8 @@ function EvaluationForm() {
 `;
 
   async function nowFinallySendMail(params) {
-  await sendEmail("contacthdobi@gmail.com", `تقييم عقاري`, htmlTemplate);
-}
+    await sendEmail("contacthdobi@gmail.com", `تقييم عقاري`, htmlTemplate);
+  }
 
 
   useEffect(() => {
