@@ -1,4 +1,4 @@
-import EvaluationForm from '@/app/components/evaluationForm';
+import EvaluationForm from '@/app/components/EvaluationForm';
 function page() {
 
 
