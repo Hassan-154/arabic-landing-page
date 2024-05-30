@@ -1,0 +1,122 @@
+{
+    "arabic": {
+        "title": "طلب تقييم",
+        "subheading": "نوع الطلب",
+        "mandatoryHeading": "(حقل إلزامي)",
+        "allRightReserved": "تقييم عقاري",
+        "purposeOfEvaluation": {
+            "title": "الغرض من التقييم",
+            "multiChoice": [
+                {
+                    "id": 1,
+                    "choice": false,
+                    "name": "رهن"
+                },
+                {
+                    "id": 2,
+                    "choice": false,
+                    "name": "تمويل"
+                },
+                {
+                    "id": 3,
+                    "choice": false,
+                    "name": "شراء"
+                }
+            ]
+        },
+        "EmailMandatory": {
+            "title": "البريد الإلكتروني",
+            "placeholder": ""
+        },
+        "TypeOfProperty": {
+            "title": "نوع العقار",
+            "types": [
+                {
+                    "id": 1,
+                    "choice": false,
+                    "name": "منزل أرضي"
+                },
+                {
+                    "id": 2,
+                    "choice": false,
+                    "name": "فيـــــــــلا"
+                }
+            ]
+        },
+        "EstateInformation": "معلومات العقار",
+        "PropertyArea": {
+            "title": "مساحة العقار",
+            "area": ""
+        },
+        "PropertyLocation": {
+            "title": "موقع العقار ",
+            "area": ""
+        },
+        "GeneralDescription": {
+            "title": "وصف عام",
+            "DescriptionNote": ""
+        },
+        "DataAccuracy": "أقر بصحة البيانات والمعلومات والمستندات المرفقة وأتحمل المسؤولية الكاملة في حال عدم صحة اي من البيانات أو المعلومات المطلوبة أعلاه دون أدنى مسؤولية على شركة كال القيمة للتطوير العقاري ",
+        "Commitment" : "تعهد و إقرا"
+    },
+    "english": { 
+        "title": "Request for Evaluation",
+        "subheading": "Request Type",
+        "mandatoryHeading": "(Mandatory Field)",
+        "allRightReserved": "Real Estate Evaluation",
+        "purposeOfEvaluation": {
+            "title": "Purpose of Evaluation",
+            "multiChoice": [
+                {
+                    "id": 1,
+                    "choice": false,
+                    "name": "Mortgage"
+                },
+                {
+                    "id": 2,
+                    "choice": false,
+                    "name": "Finance"
+                },
+                {
+                    "id": 3,
+                    "choice": false,
+                    "name": "Purchase"
+                }
+            ]
+        },
+        "EmailMandatory": {
+            "title": "Email",
+            "placeholder": ""
+        },
+        "TypeOfProperty": {
+            "title": "Type of Property",
+            "types": [
+                {
+                    "id": 1,
+                    "choice": false,
+                    "name": "Ground House"
+                },
+                {
+                    "id": 2,
+                    "choice": false,
+                    "name": "Villa"
+                }
+            ]
+        },
+        "EstateInformation": "Property Information",
+        "PropertyArea": {
+            "title": "Property Area",
+            "area": ""
+        },
+        "PropertyLocation": {
+            "title": "Property Location",
+            "area": ""
+        },
+        "GeneralDescription": {
+            "title": "General Description",
+            "DescriptionNote": ""
+        },
+        "DataAccuracy": "I acknowledge the accuracy of the provided data, information, and attached documents, and I accept full responsibility in case any of the above-mentioned data or information is found to be inaccurate, without any liability on KAL Al-Qeemah Real Estate Development Company",
+        "Commitment" : "Commitment and Acknowledgment"
+    }
+}

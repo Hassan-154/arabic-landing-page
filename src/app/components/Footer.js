@@ -22,8 +22,6 @@ function Footer() {
     }
   }, [language])
 
-  console.log(data)
-
   return (
     <div className='py-10 bg-[#BCA37E80] text-black fpnt-medium text-[14px] sm:text-[30px]'>
       <div className='max-w-[900px] mx-auto px-3'>
