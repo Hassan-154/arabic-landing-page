@@ -6,10 +6,12 @@ import evaluationData from '@/app/data/evaluation.json'
 import circle from '@/app/assets/images/Ellipse 6.png'
 import Choice from '@/app/components/Choice';
 import Input from '@/app/components/Input';
+import Button from '@/app/components/Button';
 function EvaluationForm() {
 
   const { language, setLanguage } = useContext(UserContext);
   const [data, setData] = useState([])
+  const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
     if (language === 'ar') {
@@ -18,6 +20,8 @@ function EvaluationForm() {
       setData(evaluationData.english)
     }
   }, [language])
+
+  console.log(data.Commitment)
 
   function handlePurposeOfEvaluationChoice(id) {
     setData(prevData => {
@@ -76,6 +80,10 @@ function EvaluationForm() {
       };
     });
   }
+
+  const handleCheckboxChange = (event) => {
+    setIsChecked(event.target.checked);
+  };
 
   return (
     <div className='pt-[200px] pb-20'>
@@ -141,6 +149,12 @@ function EvaluationForm() {
           <div className='h-[2px] bg-lightGrayLine w-full'></div>
           <div>
             <p className={`text-[23px] sm:text-[30px] font-medium ${language === 'en' ? 'text-left' : 'text-right'}`}>{data.DataAccuracy}</p>
+          </div>
+          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+            <div className={`flex items-center gap-2.5 ${language === 'en' ? '' : ''}`}><div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px] text-lightGray'>{data.Commitment}</p></div><input className='h-[20px] w-[20px] mt-1.5 cursor-pointer !rounded-lg' type="checkbox" checked={isChecked} onChange={handleCheckboxChange} /></div>
+          </div>
+          <div className='max-w-[430px] mx-auto w-full'>
+            <Button name={data.EvaluationButton} />
           </div>
         </div>
       </div>
