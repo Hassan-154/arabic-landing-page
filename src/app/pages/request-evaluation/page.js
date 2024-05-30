@@ -77,10 +77,6 @@ function page() {
     });
   }
 
-
-
-  console.log(data)
-
   return (
     <div className='pt-[200px] pb-20'>
       <h1 className='font-semibold text-[25px] text-center'>{data.title}</h1>
@@ -146,14 +142,6 @@ function page() {
           <div>
             <p className={`text-[23px] sm:text-[30px] font-medium ${language === 'en' ? 'text-left' : 'text-right'}`}>{data.DataAccuracy}</p>
           </div>
-
-          {/* <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className='flex items-center'>
-            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-[20px]'>{data.allRightReserved}</p><Image src={circle} alt="" width='14' height='14' className="" /></div>
-        
-            </div>
-          </div> */}
-
         </div>
       </div>
     </div>

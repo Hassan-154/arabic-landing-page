@@ -57,9 +57,9 @@
             "DescriptionNote": ""
         },
         "DataAccuracy": "أقر بصحة البيانات والمعلومات والمستندات المرفقة وأتحمل المسؤولية الكاملة في حال عدم صحة اي من البيانات أو المعلومات المطلوبة أعلاه دون أدنى مسؤولية على شركة كال القيمة للتطوير العقاري ",
-        "Commitment" : "تعهد و إقرا"
+        "Commitment": "تعهد و إقرا"
     },
-    "english": { 
+    "english": {
         "title": "Request for Evaluation",
         "subheading": "Request Type",
         "mandatoryHeading": "(Mandatory Field)",
@@ -117,6 +117,6 @@
             "DescriptionNote": ""
         },
         "DataAccuracy": "I acknowledge the accuracy of the provided data, information, and attached documents, and I accept full responsibility in case any of the above-mentioned data or information is found to be inaccurate, without any liability on KAL Al-Qeemah Real Estate Development Company",
-        "Commitment" : "Commitment and Acknowledgment"
+        "Commitment": "Commitment and Acknowledgment"
     }
 }
