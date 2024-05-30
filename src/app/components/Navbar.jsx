@@ -27,7 +27,7 @@ export default function Navbar() {
     return (
         <div className='fixed bg-white w-full h-[120px] navbar z-10 shadow-bottom'>
             <div className="fixed w-full max-w-6xl mx-auto left-0 right-0 h-16 mt-[50px] flex justify-between items-center px-3 text-black">
-                <div className='text-darkGray'>
+                <div className='text-darkGray cursor-pointer'>
                     {
                         language === 'ar' ? (
                             <p onClick={() => setLanguage('en')}>Change to <br /> English</p>
