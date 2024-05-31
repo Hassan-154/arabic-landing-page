@@ -24,34 +24,50 @@ export default function Navbar() {
         }
     }, [language])
 
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <div className='fixed bg-white w-full h-[120px] navbar z-10 shadow-bottom'>
-            <div className="fixed w-full max-w-6xl mx-auto left-0 right-0 h-16 mt-[50px] flex justify-between items-center px-3 text-black">
-                <div className='text-darkGray cursor-pointer'>
-                    {
-                        language === 'ar' ? (
-                            <p onClick={() => setLanguage('en')}>Change to <br /> English</p>
-                        ) : (
-                            <p onClick={() => setLanguage('ar')}>التغيير إلى <br /> اللغة العربية</p>
-                        )
-                    }
-                </div>
-                <ul className={`md:flex ${nav ? 'translate-x-0 text-center' : '-translate-x-full'} transform md:transform-none text-[16px] font-medium transition-transform duration-300 ease-in-out flex-col md:flex-row items-center w-full md:w-auto space-y-6 md:space-y-0 md:space-x-10 absolute md:relative bg-white md:bg-transparent top-16 md:top-0 left-0 md:left-auto md:py-0 py-4`}>
-                    {
-                        data?.map((item, id) => (
-                            <li key={id}>
-                                <Link className='cursor-pointer text-darkGray' onClick={() => setNav(false)} href={item.link}>
-                                    {item.title}
-                                </Link>
-                            </li>
-                        ))
-                    }
-                </ul>
-                <div className="max-w-[40px] h-auto">
-                    <Image src={Logo} alt='' />
-                </div>
-                <div onClick={handleClick} className="md:hidden cursor-pointer z-10">
-                    {!nav ? <FaBars size={25} className='text-darkGray' /> : <FaTimes size={25} className='text-darkGray' />}
+        <div className='relative'>
+            <div className='fixed bg-white w-full h-[70px] navbar z-10 shadow-bottom'>
+                <div className="fixed w-full max-w-6xl mx-auto left-0 right-0 h-16 mt-[10px] flex justify-between items-center px-3 text-black">
+                    <div className='text-darkGray cursor-pointer'>
+                        {
+                            language === 'ar' ? (
+                                <p onClick={() => setLanguage('en')}>Change to <br /> English</p>
+                            ) : (
+                                <p onClick={() => setLanguage('ar')}>التغيير إلى <br /> اللغة العربية</p>
+                            )
+                        }
+                    </div>
+                    <ul className={`md:flex ${nav ? 'translate-x-0 text-center' : '-translate-x-full'} transform md:transform-none text-[16px] font-medium transition-transform duration-300 ease-in-out flex-col md:flex-row items-center w-full md:w-auto space-y-6 md:space-y-0 md:space-x-10 absolute md:relative bg-white md:bg-transparent top-14 md:top-0 left-0 md:left-auto md:py-0 py-4`}>
+                        {
+                            data?.map((item, id) => (
+                                <li key={id}>
+                                    {
+                                        item.link === 'pages/request-evaluation' ? (
+                                            <Link className='cursor-pointer text-darkGray' onClick={() => setNav(false)} href={`/${item.link}`} replace={true}>
+                                                {item.title}
+                                            </Link>
+                                        ) :
+                                            (
+                                                <a className='cursor-pointer text-darkGray' onClick={(e) => { e.preventDefault(); scrollToSection(item.link); }}>{item.title}</a>
+                                            )
+                                    }
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    <div className="max-w-[32px] h-auto">
+                        <Image src={Logo} alt='' />
+                    </div>
+                    <div onClick={handleClick} className="md:hidden cursor-pointer z-10">
+                        {!nav ? <FaBars size={25} className='text-darkGray' /> : <FaTimes size={25} className='text-darkGray' />}
+                    </div>
                 </div>
             </div>
         </div>

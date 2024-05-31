@@ -20,7 +20,7 @@ function Map() {
   }, [language])
 
   return (
-    <div className='max-w-[900px] mx-auto py-16 px-3'>
+    <div className='max-w-[900px] mx-auto pt-36 pb-16 sm:pt-16 px-3' id='Contact Us'>
       <div className='flex gap-[10px] sm:gap-[40px] items-center'>
         <h3 className={`text-[16.5px] leading-[33px] md:text-[30px] font-semibold md:leading-[65px] ${language === 'en' ? 'text-left' : 'text-right'}`} itemProp="headline">{data.title}</h3>
         <div className=' min-w-[200px]  max-w-[200px]  sm:min-w-[260px] sm:max-w-[260px] h-auto'>
@@ -28,7 +28,7 @@ function Map() {
         </div>
       </div>
       <div className='mt-6 max-w-[430px] mx-auto'>
-        <Button name={data.buttonName} image={buttonImage} onClick={()=> window.open("https://iwtsp.com/966552928328", "_blank")} />
+        <Button name={data.buttonName} image={buttonImage} onClick={() => window.open("https://wa.me/966552928328", "_blank")} />
       </div>
     </div>
   )

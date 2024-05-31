@@ -2,11 +2,11 @@
   "arabic": [
     {
       "title": "عن الشركة",
-      "link": "/"
+      "link": "About Us"
     },
     {
       "title": "أعمالنا",
-      "link": "/"
+      "link": "Our Customers"
     },
     {
       "title": "طلب تقييم",
@@ -14,17 +14,17 @@
     },
     {
       "title": "تواصل معنا",
-      "link": "/"
+      "link": "Contact Us"
     }
   ],
   "english": [
     {
       "title": "About Us",
-      "link": "/"
+      "link": "About Us"
     },
     {
-      "title": "Our Services",
-      "link": "/"
+      "title": "Our Customers",
+      "link": "Our Customers"
     },
     {
       "title": "Request Evaluation",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Contact Us",
-      "link": "/"
+      "link": "Contact Us"
     }
   ]
 }

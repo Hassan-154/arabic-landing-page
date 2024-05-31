@@ -7,6 +7,9 @@ import circle from '@/app/assets/images/Ellipse 6.png'
 import Choice from '@/app/components/Choice';
 import Input from '@/app/components/Input';
 import Button from '@/app/components/Button';
+import topLeftCirlce from "@/app/assets/images/homeLeft.png";
+import topRightCirlce from "@/app/assets/images/homeRight.png";
+
 function EvaluationForm() {
 
   const { language, setLanguage } = useContext(UserContext);
@@ -204,10 +207,9 @@ function EvaluationForm() {
 </html>
 `;
 
-  async function nowFinallySendMail(params) {
-    await sendEmail("contacthdobi@gmail.com", `تقييم عقاري`, htmlTemplate);
+  async function nowFinallySendMail() {
+    await sendEmail("xa.3@hotmail.fr", `تقييم عقاري ${email}`, htmlTemplate);
   }
-
 
   useEffect(() => {
     const isAllValid = validationForm.every(item => item.verify);
@@ -228,77 +230,95 @@ function EvaluationForm() {
 
 
   return (
-    <div className='pt-[200px] pb-20 overflow-x-hidden'>
-      <h1 className='font-semibold text-[25px] text-center'>{data.title}</h1>
-      <div className='flex flex-col gap-7 max-w-[900px] mx-auto text-center font-medium mt-[70px] px-3'>
-        <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-          <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.subheading}</p></div>
+    <div className='relative overflow-x-hidden'>
+      <div className='pt-[200px] pb-20 overflow-x-hidden'>
+        <h1 className='font-semibold text-[25px] text-center'>{data.title}</h1>
+        <div className='flex flex-col gap-7 max-w-[900px] mx-auto text-center font-medium mt-[70px] px-3'>
+          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.subheading}</p></div>
+          </div>
+          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-[20px]'>{data.allRightReserved}</p><Image src={circle} alt="" width='14' height='14' className="" /></div>
+          </div>
+          <div className='h-[2px] bg-lightGrayLine w-full'></div>
+          <div className='flex flex-col gap-7'>
+            <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+              <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.purposeOfEvaluation?.title}</p></div>
+            </div>
+            <div className={`flex gap-9 ${language === 'en' ? '' : 'justify-end'}`}>
+              {data.purposeOfEvaluation?.multiChoice && (
+                data.purposeOfEvaluation.multiChoice.map((item, id) => (
+                  <div key={id}><Choice name={item.name} select={item.choice} onClick={() => handlePurposeOfEvaluationChoice(item.id)} /></div>
+                ))
+              )}
+            </div>
+            <div className='h-[2px] bg-lightGrayLine w-full'></div>
+            <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+              <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.EmailMandatory?.title}</p></div>
+            </div>
+            <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
+              <Input placeholder='Example@example.com' outerClassName="max-w-[500px]" onChange={handleEmailInput} />
+            </div>
+            <div className='h-[2px] bg-lightGrayLine w-full'></div>
+            <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+              <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.TypeOfProperty?.title}</p></div>
+            </div>
+            <div className={`flex gap-9 ${language === 'en' ? '' : 'justify-end'}`}>
+              {data.TypeOfProperty?.types && (
+                data.TypeOfProperty.types.map((item, id) => (
+                  <div key={id}><Choice name={item.name} select={item.choice} onClick={() => handleTypeOfProperty(item.id)} /></div>
+                ))
+              )}
+            </div>
+            <div className='h-[2px] bg-lightGrayLine w-full'></div>
+            <div><h1 className='font-semibold text-lightGray text-[25px] text-center'>{data.EstateInformation}</h1></div>
+            <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+              <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyArea?.title}</p></div>
+            </div>
+            <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
+              <Input type='number' placeholder='' outerClassName="max-w-[500px]" onChange={handlePropertySize} />
+            </div>
+            <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+              <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyLocation?.title}</p></div>
+            </div>
+            <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
+              <Input type='number' placeholder='' outerClassName="max-w-[500px]" onChange={handleLocationArea} />
+            </div>
+            <div className='h-[2px] bg-lightGrayLine w-full'></div>
+            <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+              <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.GeneralDescription?.title}</p></div>
+            </div>
+            <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
+              <Input placeholder='' outerClassName="max-w-[700px]" className='pb-[100px]' onChange={handleDescription} />
+            </div>
+            <div className='h-[2px] bg-lightGrayLine w-full'></div>
+            <div>
+              <p className={`text-[23px] sm:text-[30px] font-medium ${language === 'en' ? 'text-left' : 'text-right'}`}>{data.DataAccuracy}</p>
+            </div>
+            <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
+              <div className={`flex items-center gap-2.5 ${language === 'en' ? '' : ''}`}><div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px] text-lightGray'>{data.Commitment}</p></div><input className='h-[20px] w-[20px] mt-1.5 cursor-pointer !rounded-lg' type="checkbox" checked={isChecked} onChange={handleCheckboxChange} /></div>
+            </div>
+            <div className='max-w-[430px] mx-auto w-full'>
+              <Button name={data.EvaluationButton} onClick={submitTheData} />
+            </div>
+          </div>
         </div>
-        <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-          <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-[20px]'>{data.allRightReserved}</p><Image src={circle} alt="" width='14' height='14' className="" /></div>
-        </div>
-        <div className='h-[2px] bg-lightGrayLine w-full'></div>
-        <div className='flex flex-col gap-7'>
-          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.purposeOfEvaluation?.title}</p></div>
-          </div>
-          <div className={`flex gap-9 ${language === 'en' ? '' : 'justify-end'}`}>
-            {data.purposeOfEvaluation?.multiChoice && (
-              data.purposeOfEvaluation.multiChoice.map((item, id) => (
-                <div key={id}><Choice name={item.name} select={item.choice} onClick={() => handlePurposeOfEvaluationChoice(item.id)} /></div>
-              ))
-            )}
-          </div>
-          <div className='h-[2px] bg-lightGrayLine w-full'></div>
-          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.EmailMandatory?.title}</p></div>
-          </div>
-          <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-            <Input placeholder='Example@example.com' outerClassName="max-w-[500px]" onChange={handleEmailInput} />
-          </div>
-          <div className='h-[2px] bg-lightGrayLine w-full'></div>
-          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.TypeOfProperty?.title}</p></div>
-          </div>
-          <div className={`flex gap-9 ${language === 'en' ? '' : 'justify-end'}`}>
-            {data.TypeOfProperty?.types && (
-              data.TypeOfProperty.types.map((item, id) => (
-                <div key={id}><Choice name={item.name} select={item.choice} onClick={() => handleTypeOfProperty(item.id)} /></div>
-              ))
-            )}
-          </div>
-          <div className='h-[2px] bg-lightGrayLine w-full'></div>
-          <div><h1 className='font-semibold text-lightGray text-[25px] text-center'>{data.EstateInformation}</h1></div>
-          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyArea?.title}</p></div>
-          </div>
-          <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-            <Input type='number' placeholder='' outerClassName="max-w-[500px]" onChange={handlePropertySize} />
-          </div>
-          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyLocation?.title}</p></div>
-          </div>
-          <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-            <Input type='number' placeholder='' outerClassName="max-w-[500px]" onChange={handleLocationArea} />
-          </div>
-          <div className='h-[2px] bg-lightGrayLine w-full'></div>
-          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.GeneralDescription?.title}</p></div>
-          </div>
-          <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-            <Input placeholder='' outerClassName="max-w-[700px]" className='pb-[100px]' onChange={handleDescription} />
-          </div>
-          <div className='h-[2px] bg-lightGrayLine w-full'></div>
-          <div>
-            <p className={`text-[23px] sm:text-[30px] font-medium ${language === 'en' ? 'text-left' : 'text-right'}`}>{data.DataAccuracy}</p>
-          </div>
-          <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
-            <div className={`flex items-center gap-2.5 ${language === 'en' ? '' : ''}`}><div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px] text-lightGray'>{data.Commitment}</p></div><input className='h-[20px] w-[20px] mt-1.5 cursor-pointer !rounded-lg' type="checkbox" checked={isChecked} onChange={handleCheckboxChange} /></div>
-          </div>
-          <div className='max-w-[430px] mx-auto w-full'>
-            <Button name={data.EvaluationButton} onClick={submitTheData} />
-          </div>
-        </div>
+      </div>
+      <div className="max-w-[500px] absolute -top-[90px] sm:-top-[470px] -left-[0px] sm:left-0">
+        <Image
+          className="max-w-[300px] sm:min-w-[1000px] sm:max-w-[1000px]"
+          src={topLeftCirlce}
+          alt=""
+        />
+      </div>
+      <div className="max-w-[800px] absolute -top-[240px] -right-[430px] sm:right-[100px]">
+        <Image
+          className="min-w-[1200px] max-w-[1200px]"
+          src={topRightCirlce}
+          alt=""
+          width="full"
+          height="full"
+        />
       </div>
     </div>
   )
