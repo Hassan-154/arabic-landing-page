@@ -9,15 +9,19 @@ import Input from '@/app/components/Input';
 import Button from '@/app/components/Button';
 import topLeftCirlce from "@/app/assets/images/homeLeft.png";
 import topRightCirlce from "@/app/assets/images/homeRight.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function EvaluationForm() {
 
   const { language, setLanguage } = useContext(UserContext);
   const [data, setData] = useState([])
   const [isChecked, setIsChecked] = useState(false);
+  const [pruposeOfEva, setpruposeOfEva] = useState('')
+  const [typeOfProperty, settypeOfProperty] = useState('')
   const [email, setEmail] = useState('')
-  const [propertyArea, setPropertyArea] = useState(0)
-  const [locationArea, setLocationArea] = useState(0)
+  const [propertyArea, setPropertyArea] = useState()
+  const [locationArea, setLocationArea] = useState()
   const [description, setDescription] = useState('')
   const [validationForm, setvalidationForm] = useState([
     { name: 'purposeOfTheEvaluation', verify: false },
@@ -36,6 +40,10 @@ function EvaluationForm() {
     }
   }, [language])
 
+  const fillTheCompleteForm = () => toast("please fill the complete form.");
+  const agreeOnTermAndCondition = () => toast("make sure to agree on terms and condition.");
+  const formSubmittedSuccessfully = () => toast("form submitted successfully.");
+
   function handlePurposeOfEvaluationChoice(id) {
     setData(prevData => {
       const turnedOffData = {
@@ -50,6 +58,7 @@ function EvaluationForm() {
       };
       const newMultiChoice = turnedOffData.purposeOfEvaluation.multiChoice.map(item => {
         if (item.id === id) {
+          setpruposeOfEva(item.name);
           return { ...item, choice: !item.choice };
         }
         return item;
@@ -79,6 +88,9 @@ function EvaluationForm() {
       };
       const newTypes = turnedOffData.TypeOfProperty.types.map(item => {
         if (item.id === id) {
+          if (!item.choice) {
+            settypeOfProperty(item.name);
+          }
           return { ...item, choice: !item.choice };
         }
         return item;
@@ -169,59 +181,53 @@ function EvaluationForm() {
     }));
   }
 
+  const handleToFinallySendMail = async () => {
+    const data = {
+      password: "2)9^Us+wCG*xe*Ik",
+      purpose: pruposeOfEva,
+      type: typeOfProperty,
+      space: propertyArea,
+      location: locationArea,
+      description: description,
+      email: email
+    };
 
-  const sendEmail = async (userEmail, subject, htmlTemplate) => {
     try {
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: "kalevaluation@gmail.com",
-          pass: "nffx ozog uhmt nnlv",
-        }
+      const response = await fetch('https://kal-backend.vercel.app/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
-      const mailOptions = {
-        from: "kalevaluation@gmail.com",
-        to: userEmail,
-        subject: subject,
-        html: htmlTemplate,
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
-      const info = await transporter.sendMail(mailOptions);
-      console.log('Email sent: ' + info.response);
+
+      const responseData = await response.json();
+      console.log('Success:', responseData);
+      formSubmittedSuccessfully()
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
 
     } catch (error) {
-      console.log(error);
-      throw new Error("Internal server Error (nodemailer)");
+      console.error('Error:', error);
     }
   };
-
-  const htmlTemplate = `
-<html>
-<head>
-    <title>تقييم عقاري </title>
-</head>
-<body>
-    <p>Hello</p>
-    <p>put here the information user choosed</p>
-    <p>Thank you!</p>
-</body>
-</html>
-`;
-
-  async function nowFinallySendMail() {
-    await sendEmail("xa.3@hotmail.fr", `تقييم عقاري ${email}`, htmlTemplate);
-  }
 
   useEffect(() => {
     const isAllValid = validationForm.every(item => item.verify);
     if (isAllValid) {
       if (!isChecked) {
-        console.log('make sure to agree on terms and condition.')
+        agreeOnTermAndCondition()
       }
       else {
-        console.log('form can be submit now.')
-        nowFinallySendMail()
+        handleToFinallySendMail()
       }
     } else {
+      fillTheCompleteForm()
       console.log('please fill the complete form.');
     }
   }, [validationForm]);
@@ -276,13 +282,13 @@ function EvaluationForm() {
               <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyArea?.title}</p></div>
             </div>
             <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-              <Input type='number' placeholder='' outerClassName="max-w-[500px]" onChange={handlePropertySize} />
+              <Input type='number' placeholder='' outerClassName="max-w-[500px]" value={propertyArea} onChange={handlePropertySize} />
             </div>
             <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
               <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyLocation?.title}</p></div>
             </div>
             <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-              <Input type='number' placeholder='' outerClassName="max-w-[500px]" onChange={handleLocationArea} />
+              <Input type='number' placeholder='' outerClassName="max-w-[500px]" value={locationArea} onChange={handleLocationArea} />
             </div>
             <div className='h-[2px] bg-lightGrayLine w-full'></div>
             <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
@@ -320,6 +326,7 @@ function EvaluationForm() {
           height="full"
         />
       </div>
+      <ToastContainer position="top-left" className='mt-20' />
     </div>
   )
 }
