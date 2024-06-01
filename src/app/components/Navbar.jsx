@@ -34,7 +34,7 @@ export default function Navbar() {
         };
 
         handleHashChange();
-    
+
         window.addEventListener('hashchange', handleHashChange);
 
         return () => {

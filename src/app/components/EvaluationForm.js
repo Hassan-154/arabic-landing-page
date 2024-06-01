@@ -20,8 +20,8 @@ function EvaluationForm() {
   const [pruposeOfEva, setpruposeOfEva] = useState('')
   const [typeOfProperty, settypeOfProperty] = useState('')
   const [email, setEmail] = useState('')
-  const [propertyArea, setPropertyArea] = useState()
-  const [locationArea, setLocationArea] = useState()
+  const [propertyArea, setPropertyArea] = useState('')
+  const [locationArea, setLocationArea] = useState('')
   const [description, setDescription] = useState('')
   const [validationForm, setvalidationForm] = useState([
     { name: 'purposeOfTheEvaluation', verify: false },
@@ -156,22 +156,22 @@ function EvaluationForm() {
       return item;
     }));
 
-    const isPropertySizeValid = propertyArea > 0;
+    const isPropertySizeValid = propertyArea.trim() !== '';
     setvalidationForm(prevForm => prevForm.map(item => {
       if (item.name === 'propertySize') {
         return { ...item, verify: isPropertySizeValid };
       }
       return item;
     }));
-
-    const isLocationValid = locationArea > 0;
+    
+    const isLocationValid = locationArea.trim() !== '';
     setvalidationForm(prevForm => prevForm.map(item => {
       if (item.name === 'location') {
         return { ...item, verify: isLocationValid };
       }
       return item;
     }));
-
+    
     const isDescriptionNotEmpty = description.trim() !== '';
     setvalidationForm(prevForm => prevForm.map(item => {
       if (item.name === 'description') {
@@ -228,11 +228,9 @@ function EvaluationForm() {
       }
     } else {
       fillTheCompleteForm()
-      console.log('please fill the complete form.');
     }
   }, [validationForm]);
 
-  console.log(isChecked)
 
 
   return (
@@ -282,13 +280,13 @@ function EvaluationForm() {
               <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyArea?.title}</p></div>
             </div>
             <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-              <Input type='number' placeholder='' outerClassName="max-w-[500px]" value={propertyArea} onChange={handlePropertySize} />
+              <Input placeholder='' outerClassName="max-w-[500px]" value={propertyArea} onChange={handlePropertySize} />
             </div>
             <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
               <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.PropertyLocation?.title}</p></div>
             </div>
             <div className={`flex min-w-full w-full mx-auto ${language === 'en' ? '' : 'justify-end'}`}>
-              <Input type='number' placeholder='' outerClassName="max-w-[500px]" value={locationArea} onChange={handleLocationArea} />
+              <Input placeholder='' outerClassName="max-w-[500px]" value={locationArea} onChange={handleLocationArea} />
             </div>
             <div className='h-[2px] bg-lightGrayLine w-full'></div>
             <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
