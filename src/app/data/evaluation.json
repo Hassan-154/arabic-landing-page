@@ -10,7 +10,7 @@
                 {
                     "id": 1,
                     "choice": false,
-                    "name": "رهن"
+                    "name": "شراء"
                 },
                 {
                     "id": 2,
@@ -20,7 +20,47 @@
                 {
                     "id": 3,
                     "choice": false,
-                    "name": "شراء"
+                    "name": "رهن"
+                },
+                {
+                    "id": 4,
+                    "choice": false,
+                    "name": "بيع"
+                },
+                {
+                    "id": 5,
+                    "choice": false,
+                    "name": "أغراض داخلية"
+                },
+                {
+                    "id": 6,
+                    "choice": false,
+                    "name": "أغراض محاسبية"
+                },
+                {
+                    "id": 7,
+                    "choice": false,
+                    "name": "أغراض قانونية"
+                },
+                {
+                    "id": 8,
+                    "choice": false,
+                    "name": "نزاعات وتقاضي"
+                },
+                {
+                    "id": 9,
+                    "choice": false,
+                    "name": "تركات ومواريث"
+                },
+                {
+                    "id": 10,
+                    "choice": false,
+                    "name": "تأمين"
+                },
+                {
+                    "id": 11,
+                    "choice": false,
+                    "name": "بيع قاصر"
                 }
             ]
         },
@@ -34,12 +74,52 @@
                 {
                     "id": 1,
                     "choice": false,
-                    "name": "منزل أرضي"
+                    "name": "مبنى سكني"
                 },
                 {
                     "id": 2,
                     "choice": false,
-                    "name": "فيـــــــــلا"
+                    "name": "أرض سكنية"
+                },
+                {
+                    "id": 3,
+                    "choice": false,
+                    "name": "مبنى تجاري"
+                },
+                {
+                    "id": 4,
+                    "choice": false,
+                    "name": "أرض تجارية"
+                },
+                {
+                    "id": 5,
+                    "choice": false,
+                    "name": "أرض خام كبيرة"
+                },
+                {
+                    "id": 6,
+                    "choice": false,
+                    "name": "فندق"
+                },
+                {
+                    "id": 7,
+                    "choice": false,
+                    "name": "مول تجاري"
+                },
+                {
+                    "id": 8,
+                    "choice": false,
+                    "name": "مبنى مكتبي"
+                },
+                {
+                    "id": 9,
+                    "choice": false,
+                    "name": "محطة وقود"
+                },
+                {
+                    "id": 10,
+                    "choice": false,
+                    "name": "صالة رياضية"
                 }
             ]
         },
@@ -58,7 +138,7 @@
         },
         "DataAccuracy": "أقر بصحة البيانات والمعلومات والمستندات المرفقة وأتحمل المسؤولية الكاملة في حال عدم صحة اي من البيانات أو المعلومات المطلوبة أعلاه دون أدنى مسؤولية على شركة كال القيمة للتطوير العقاري ",
         "Commitment": "تعهد و إقرا",
-        "EvaluationButton" : "إرسال طلب التقييم"
+        "EvaluationButton": "إرسال طلب التقييم"
     },
     "english": {
         "title": "Request for Evaluation",
@@ -71,17 +151,57 @@
                 {
                     "id": 1,
                     "choice": false,
-                    "name": "Mortgage"
+                    "name": "Purchase"
                 },
                 {
                     "id": 2,
                     "choice": false,
-                    "name": "Finance"
+                    "name": "Financing"
                 },
                 {
                     "id": 3,
                     "choice": false,
-                    "name": "Purchase"
+                    "name": "Mortgage"
+                },
+                {
+                    "id": 4,
+                    "choice": false,
+                    "name": "Sale"
+                },
+                {
+                    "id": 5,
+                    "choice": false,
+                    "name": "Internal Affairs"
+                },
+                {
+                    "id": 6,
+                    "choice": false,
+                    "name": "Accounting Purposes"
+                },
+                {
+                    "id": 7,
+                    "choice": false,
+                    "name": "Legal Purposes"
+                },
+                {
+                    "id": 8,
+                    "choice": false,
+                    "name": "Disputes and Litigation"
+                },
+                {
+                    "id": 9,
+                    "choice": false,
+                    "name": "Estates and Inheritances"
+                },
+                {
+                    "id": 10,
+                    "choice": false,
+                    "name": "Insurance"
+                },
+                {
+                    "id": 11,
+                    "choice": false,
+                    "name": "Sale of Minor"
                 }
             ]
         },
@@ -95,12 +215,52 @@
                 {
                     "id": 1,
                     "choice": false,
-                    "name": "Ground House"
+                    "name": "Residential Building"
                 },
                 {
                     "id": 2,
                     "choice": false,
-                    "name": "Villa"
+                    "name": "Residential Land"
+                },
+                {
+                    "id": 3,
+                    "choice": false,
+                    "name": "Commercial Building"
+                },
+                {
+                    "id": 4,
+                    "choice": false,
+                    "name": "Commercial Land"
+                },
+                {
+                    "id": 5,
+                    "choice": false,
+                    "name": "Raw Commercial Land"
+                },
+                {
+                    "id": 6,
+                    "choice": false,
+                    "name": "Hotel"
+                },
+                {
+                    "id": 7,
+                    "choice": false,
+                    "name": "Shopping Mall"
+                },
+                {
+                    "id": 8,
+                    "choice": false,
+                    "name": "Office Building"
+                },
+                {
+                    "id": 9,
+                    "choice": false,
+                    "name": "Gas Station"
+                },
+                {
+                    "id": 10,
+                    "choice": false,
+                    "name": "Gymnasium"
                 }
             ]
         },
@@ -119,6 +279,6 @@
         },
         "DataAccuracy": "I acknowledge the accuracy of the provided data, information, and attached documents, and I accept full responsibility in case any of the above-mentioned data or information is found to be inaccurate, without any liability on KAL Al-Qeemah Real Estate Development Company",
         "Commitment": "Commitment and Acknowledgment",
-        "EvaluationButton" : "Submit Evaluation Request"
+        "EvaluationButton": "Submit Evaluation Request"
     }
 }

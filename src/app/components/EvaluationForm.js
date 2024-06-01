@@ -251,7 +251,7 @@ function EvaluationForm() {
             <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
               <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.purposeOfEvaluation?.title}</p></div>
             </div>
-            <div className={`flex gap-9 ${language === 'en' ? '' : 'justify-end'}`}>
+            <div className={`flex flex-wrap gap-6 ${language === 'en' ? '' : 'justify-end'}`}>
               {data.purposeOfEvaluation?.multiChoice && (
                 data.purposeOfEvaluation.multiChoice.map((item, id) => (
                   <div key={id}><Choice name={item.name} select={item.choice} onClick={() => handlePurposeOfEvaluationChoice(item.id)} /></div>
@@ -269,7 +269,7 @@ function EvaluationForm() {
             <div className={`flex ${language === 'en' ? '' : 'justify-end'}`}>
               <div className={`flex items-center gap-1 ${language === 'en' ? 'flex-row-reverse' : ''}`}><p className='text-lightGray font-semibold pt-[7px]'>{data.mandatoryHeading}</p><p className='text-[23px]'>{data.TypeOfProperty?.title}</p></div>
             </div>
-            <div className={`flex gap-9 ${language === 'en' ? '' : 'justify-end'}`}>
+            <div className={`flex flex-wrap gap-6 ${language === 'en' ? '' : 'justify-end'}`}>
               {data.TypeOfProperty?.types && (
                 data.TypeOfProperty.types.map((item, id) => (
                   <div key={id}><Choice name={item.name} select={item.choice} onClick={() => handleTypeOfProperty(item.id)} /></div>
